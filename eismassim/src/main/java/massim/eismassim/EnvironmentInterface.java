@@ -86,7 +86,7 @@ public class EnvironmentInterface extends EIDefaultImpl implements Runnable{
         var e = entities.get(name);
         if (e == null) throw new PerceiveException("unknown entity");
         if (e instanceof ConnectedEntity && !((ConnectedEntity) e).isConnected())
-            throw new PerceiveException("no valid connection");
+            ((ConnectedEntity) e).establishConnection();
         return e.getPercepts();
     }
 

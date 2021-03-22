@@ -139,7 +139,7 @@ public abstract class ConnectedEntity extends Entity {
     }
 
     /**
-     * If enabled, percepts will be cleared after each call to {@link #getAllPercepts}.
+     * If enabled, percepts will be cleared after each call to {@link #getPercepts}.
      */
     static void enableOnlyOnceRetrieval() {
         onlyOnce = true;
